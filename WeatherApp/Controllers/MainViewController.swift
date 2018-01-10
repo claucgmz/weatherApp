@@ -20,6 +20,9 @@ class MainViewController: UIViewController {
   @IBOutlet weak var imageContainerView: UIView!
   @IBOutlet weak var minTemperatureLabel: UILabel!
   @IBOutlet weak var maxTemperatureLabel: UILabel!
+  @IBOutlet weak var loadingView: UIActivityIndicatorView!
+  @IBOutlet weak var generalErrorLabel: UILabel!
+  @IBOutlet weak var weatherDataView: UIStackView!
   
   let weatherService = WeatherService()
   var locationManager = CLLocationManager()
@@ -27,8 +30,8 @@ class MainViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     initLocationManager()
+    setupView()
     locationManager.startUpdatingLocation()
-    viewSetup()
   }
   
   func initLocationManager() {
@@ -37,12 +40,19 @@ class MainViewController: UIViewController {
     locationManager.requestWhenInUseAuthorization()
   }
   
-  func viewSetup() {
+  func setupView() {
+    weatherDataView(isHidden: true, errorIsHidden: true, isLoading: true)
     imageContainerView.setRounded()
   }
   
   func getWeather(withLocation location: GeoCoordinate) {
     weatherService.getWeather(withLocation: location, onSuccess: updateWeatherData, onFailure: getWeatherOnFailure)
+  }
+  
+  func weatherDataView(isHidden: Bool, errorIsHidden: Bool, isLoading: Bool) {
+    weatherDataView.isHidden = isHidden
+    generalErrorLabel.isHidden = errorIsHidden
+    isLoading ? loadingView.startAnimating() : loadingView.stopAnimating()
   }
   
   func updateWeatherData(weather: Weather?) {
@@ -59,10 +69,15 @@ class MainViewController: UIViewController {
     iconImageView.image = currentWeather.weatherIconImage
     dateLabel.text = currentWeather.date?.toString(withFormat: "MMMM, dd YYYY")
     weekdayLabel.text = currentWeather.date?.dayOfWeek
+    
+    weatherDataView(isHidden: false, errorIsHidden: true, isLoading: false)
   }
   
   func getWeatherOnFailure(_ error: WeatherError?) {
-    print(error?.getDescription() ?? "Couldn't get weather data")
+    let currentError = error?.getDescription() ?? "Couldn't get weather data"
+    print(currentError)
+    generalErrorLabel.text = currentError
+    weatherDataView(isHidden: true, errorIsHidden: false, isLoading: false)
   }
 
 }

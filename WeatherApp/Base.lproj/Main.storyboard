@@ -109,10 +109,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hu6-c9-Zk2">
-                                        <rect key="frame" x="96.5" y="243" width="87" height="71"/>
+                                        <rect key="frame" x="89" y="243" width="102" height="71"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-d9-4hJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="33"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-d9-4hJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="102" height="33"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhg-SN-XZl" userLabel="min">
                                                         <rect key="frame" x="0.0" y="7" width="31" height="19"/>
@@ -121,15 +121,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgf-Yg-S4T" userLabel="max">
-                                                        <rect key="frame" x="56" y="7" width="31" height="19"/>
+                                                        <rect key="frame" x="71" y="7" width="31" height="19"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="xun-ZK-AH2">
-                                                <rect key="frame" x="9" y="38" width="69" height="33"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="xun-ZK-AH2">
+                                                <rect key="frame" x="9" y="38" width="84" height="33"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5˚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiG-X4-74F">
                                                         <rect key="frame" x="0.0" y="0.0" width="22" height="33"/>
@@ -138,7 +138,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5˚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQn-4O-dvN">
-                                                        <rect key="frame" x="47" y="0.0" width="22" height="33"/>
+                                                        <rect key="frame" x="62" y="0.0" width="22" height="33"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -150,6 +150,15 @@
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=compact" spacing="15"/>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mYT-Cq-LwZ">
+                                <rect key="frame" x="142" y="266" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error: Can't get your current location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkB-yb-jDS">
+                                <rect key="frame" x="25" y="256" width="270" height="56"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -158,6 +167,8 @@
                             </constraint>
                             <constraint firstItem="AWc-xD-BNH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="6tJ-bV-Fg0"/>
                             <constraint firstItem="cVn-cT-bc5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8dh-XW-iLi"/>
+                            <constraint firstItem="mYT-Cq-LwZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bue-Hp-ixv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HkB-yb-jDS" secondAttribute="trailing" constant="25" id="EHR-o9-wlm"/>
                             <constraint firstItem="AWc-xD-BNH" firstAttribute="width" secondItem="cVn-cT-bc5" secondAttribute="width" multiplier="0.5" id="M8h-gH-uET"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cVn-cT-bc5" secondAttribute="bottom" id="Ogh-XN-J05"/>
                             <constraint firstItem="AWc-xD-BNH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PIH-Q4-Sh1"/>
@@ -165,10 +176,13 @@
                             <constraint firstItem="AWc-xD-BNH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="340" id="eEv-cO-yXc">
                                 <variation key="heightClass=compact" constant="20"/>
                             </constraint>
+                            <constraint firstItem="HkB-yb-jDS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fvL-3b-B0f"/>
                             <constraint firstItem="AWc-xD-BNH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gkb-u0-EBx"/>
+                            <constraint firstItem="HkB-yb-jDS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="kvN-2f-MHF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AWc-xD-BNH" secondAttribute="trailing" constant="20" id="nvu-84-XCQ"/>
                             <constraint firstItem="cVn-cT-bc5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="osh-Sy-0QC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cVn-cT-bc5" secondAttribute="trailing" id="pH9-yw-gSB"/>
+                            <constraint firstItem="mYT-Cq-LwZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yF4-SF-pjg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
@@ -196,12 +210,15 @@
                     <connections>
                         <outlet property="dateLabel" destination="GdF-Lj-b7T" id="RM7-88-zWS"/>
                         <outlet property="descriptionLabel" destination="dQz-XH-WLP" id="ypb-Tm-X7z"/>
+                        <outlet property="generalErrorLabel" destination="HkB-yb-jDS" id="Xhs-re-fqi"/>
                         <outlet property="iconImageView" destination="bHD-bJ-6pw" id="vga-Ef-ERL"/>
                         <outlet property="imageContainerView" destination="5pV-8t-yE9" id="1xM-dP-tBM"/>
+                        <outlet property="loadingView" destination="mYT-Cq-LwZ" id="6U4-YL-jex"/>
                         <outlet property="locationNameLabel" destination="RwX-xf-g32" id="vyQ-tj-taL"/>
                         <outlet property="maxTemperatureLabel" destination="LQn-4O-dvN" id="EYx-hm-BSh"/>
                         <outlet property="minTemperatureLabel" destination="QiG-X4-74F" id="PHa-eU-Ll3"/>
                         <outlet property="temperatureLabel" destination="mxx-q6-uZ5" id="TqO-v7-MAv"/>
+                        <outlet property="weatherDataView" destination="AWc-xD-BNH" id="g5q-FD-vKb"/>
                         <outlet property="weekdayLabel" destination="yd0-ig-ZRe" id="t5M-nx-mOC"/>
                     </connections>
                 </viewController>

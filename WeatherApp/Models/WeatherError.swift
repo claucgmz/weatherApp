@@ -15,7 +15,7 @@ enum WeatherError: Error {
   func getDescription() -> String {
     switch self {
       case .noGeoLocation:
-        return "Couldn't get you current location."
+        return "Couldn't get your current location."
       default:
         return "Couldn't get weather data"
     }

@@ -11,6 +11,16 @@ import CoreLocation
 
 class MainViewController: UIViewController {
   
+  @IBOutlet weak var locationNameLabel: UILabel!
+  @IBOutlet weak var descriptionLabel: UILabel!
+  @IBOutlet weak var temperatureLabel: UILabel!
+  @IBOutlet weak var iconImageView: UIImageView!
+  @IBOutlet weak var weekdayLabel: UILabel!
+  @IBOutlet weak var dateLabel: UILabel!
+  @IBOutlet weak var imageContainerView: UIView!
+  @IBOutlet weak var minTemperatureLabel: UILabel!
+  @IBOutlet weak var maxTemperatureLabel: UILabel!
+  
   let weatherService = WeatherService()
   var locationManager = CLLocationManager()
   
@@ -18,12 +28,17 @@ class MainViewController: UIViewController {
     super.viewDidLoad()
     initLocationManager()
     locationManager.startUpdatingLocation()
+    viewSetup()
   }
   
   func initLocationManager() {
     locationManager.delegate = self
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
     locationManager.requestWhenInUseAuthorization()
+  }
+  
+  func viewSetup() {
+    imageContainerView.setRounded()
   }
   
   func getWeather(withLocation location: GeoCoordinate) {
@@ -36,7 +51,14 @@ class MainViewController: UIViewController {
       return
     }
     
-    print(currentWeather)
+    locationNameLabel.text = "\(currentWeather.cityName),\(currentWeather.countryName)"
+    descriptionLabel.text = currentWeather.description
+    temperatureLabel.text = "\(currentWeather.temperatureInCelsius)˚"
+    minTemperatureLabel.text = "\(currentWeather.minTemperatureInCelsius)˚"
+    maxTemperatureLabel.text = "\(currentWeather.maxTemperatureInCelsius)˚"
+    iconImageView.image = currentWeather.weatherIconImage
+    dateLabel.text = currentWeather.date?.toString(withFormat: "MMMM, dd YYYY")
+    weekdayLabel.text = currentWeather.date?.dayOfWeek
   }
   
   func getWeatherOnFailure(_ error: WeatherError?) {

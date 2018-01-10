@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F94E5C9200693F900E273C3 /* Date+DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94E5C8200693F900E273C3 /* Date+DS.swift */; };
+		5F94E5CD2006C58C00E273C3 /* UIView+transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94E5CC2006C58C00E273C3 /* UIView+transform.swift */; };
 		5FA8946420054061009D80A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8946320054061009D80A3 /* AppDelegate.swift */; };
 		5FA8946920054061009D80A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA8946720054061009D80A3 /* Main.storyboard */; };
 		5FA8946B20054061009D80A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA8946A20054061009D80A3 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		11CDED5F5177E0B5B8A59E78 /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F94E5C8200693F900E273C3 /* Date+DS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DS.swift"; sourceTree = "<group>"; };
+		5F94E5CC2006C58C00E273C3 /* UIView+transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+transform.swift"; sourceTree = "<group>"; };
 		5FA8946020054061009D80A3 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA8946320054061009D80A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FA8946820054061009D80A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F94E5C7200693D600E273C3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5F94E5CC2006C58C00E273C3 /* UIView+transform.swift */,
+				5F94E5C8200693F900E273C3 /* Date+DS.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5FA8945720054061009D80A3 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +84,7 @@
 		5FA8946220054061009D80A3 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				5F94E5C7200693D600E273C3 /* Extensions */,
 				5FA8947A20054557009D80A3 /* API */,
 				5FA894782005453C009D80A3 /* Controllers */,
 				5FA8947720054536009D80A3 /* Views */,
@@ -276,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F94E5C9200693F900E273C3 /* Date+DS.swift in Sources */,
 				5FA8948A20057504009D80A3 /* MainViewController.swift in Sources */,
 				5FA8948220054B4B009D80A3 /* WeatherService.swift in Sources */,
 				5FA8947C20054A29009D80A3 /* APIManager.swift in Sources */,
+				5F94E5CD2006C58C00E273C3 /* UIView+transform.swift in Sources */,
 				5FA8946420054061009D80A3 /* AppDelegate.swift in Sources */,
 				5FA8948620055295009D80A3 /* GeoCoordinate.swift in Sources */,
 				5FA894882005536A009D80A3 /* Weather.swift in Sources */,
@@ -423,6 +439,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FQB7945LTG;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nearsoft.WeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,6 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FQB7945LTG;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nearsoft.WeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

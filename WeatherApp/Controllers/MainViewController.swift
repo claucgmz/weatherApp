@@ -47,6 +47,9 @@ class MainViewController: UIViewController {
   
   func getWeather(withLocation location: GeoCoordinate) {
     weatherService.getWeather(withLocation: location, onSuccess: updateWeatherData, onFailure: getWeatherOnFailure)
+    weatherService.getWeatherForecast(withLocation: location, onSuccess: { weathers in
+       
+    }, onFailure: getWeatherOnFailure)
   }
   
   func weatherDataView(isHidden: Bool, errorIsHidden: Bool, isLoading: Bool) {

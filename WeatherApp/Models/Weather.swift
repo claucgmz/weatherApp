@@ -48,7 +48,7 @@ struct Weather: Mappable {
     temperature <- map["main.temp"]
     minTemperature <- map["main.temp_min"]
     maxTemperature <- map["main.temp_max"]
-    description <- map["weather.0.main"]
+    description <- map["weather.0.description"]
     countryName <- map["sys.country"]
     cityName <- map["name"]
     weatherIcon <- map["weather.0.icon"]

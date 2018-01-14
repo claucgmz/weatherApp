@@ -208,18 +208,18 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="dateLabel" destination="GdF-Lj-b7T" id="RM7-88-zWS"/>
-                        <outlet property="descriptionLabel" destination="dQz-XH-WLP" id="ypb-Tm-X7z"/>
-                        <outlet property="generalErrorLabel" destination="HkB-yb-jDS" id="Xhs-re-fqi"/>
-                        <outlet property="iconImageView" destination="bHD-bJ-6pw" id="vga-Ef-ERL"/>
-                        <outlet property="imageContainerView" destination="5pV-8t-yE9" id="1xM-dP-tBM"/>
-                        <outlet property="loadingView" destination="mYT-Cq-LwZ" id="6U4-YL-jex"/>
-                        <outlet property="locationNameLabel" destination="RwX-xf-g32" id="vyQ-tj-taL"/>
-                        <outlet property="maxTemperatureLabel" destination="LQn-4O-dvN" id="EYx-hm-BSh"/>
-                        <outlet property="minTemperatureLabel" destination="QiG-X4-74F" id="PHa-eU-Ll3"/>
-                        <outlet property="temperatureLabel" destination="mxx-q6-uZ5" id="TqO-v7-MAv"/>
-                        <outlet property="weatherDataView" destination="AWc-xD-BNH" id="g5q-FD-vKb"/>
-                        <outlet property="weekdayLabel" destination="yd0-ig-ZRe" id="t5M-nx-mOC"/>
+                        <outlet property="dateLabel" destination="GdF-Lj-b7T" id="gLl-Ak-Nwk"/>
+                        <outlet property="descriptionLabel" destination="dQz-XH-WLP" id="qNh-Lu-izH"/>
+                        <outlet property="generalErrorLabel" destination="HkB-yb-jDS" id="EYY-MD-bEM"/>
+                        <outlet property="iconImageView" destination="bHD-bJ-6pw" id="PIN-Fk-4ng"/>
+                        <outlet property="imageContainerView" destination="5pV-8t-yE9" id="V6J-d3-kld"/>
+                        <outlet property="loadingView" destination="mYT-Cq-LwZ" id="8yY-Vb-9B4"/>
+                        <outlet property="locationNameLabel" destination="RwX-xf-g32" id="GIQ-t4-H5l"/>
+                        <outlet property="maxTemperatureLabel" destination="LQn-4O-dvN" id="rYI-62-Bh3"/>
+                        <outlet property="minTemperatureLabel" destination="QiG-X4-74F" id="KMq-vR-ZkE"/>
+                        <outlet property="temperatureLabel" destination="mxx-q6-uZ5" id="JXr-Z5-24V"/>
+                        <outlet property="weatherDataView" destination="AWc-xD-BNH" id="zFL-Wm-bwD"/>
+                        <outlet property="weekdayLabel" destination="yd0-ig-ZRe" id="HhJ-vo-QrZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

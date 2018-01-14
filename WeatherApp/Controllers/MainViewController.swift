@@ -11,21 +11,21 @@ import CoreLocation
 
 class MainViewController: UIViewController {
   
-  @IBOutlet weak var locationNameLabel: UILabel!
-  @IBOutlet weak var descriptionLabel: UILabel!
-  @IBOutlet weak var temperatureLabel: UILabel!
-  @IBOutlet weak var iconImageView: UIImageView!
-  @IBOutlet weak var weekdayLabel: UILabel!
-  @IBOutlet weak var dateLabel: UILabel!
-  @IBOutlet weak var imageContainerView: UIView!
-  @IBOutlet weak var minTemperatureLabel: UILabel!
-  @IBOutlet weak var maxTemperatureLabel: UILabel!
-  @IBOutlet weak var loadingView: UIActivityIndicatorView!
-  @IBOutlet weak var generalErrorLabel: UILabel!
-  @IBOutlet weak var weatherDataView: UIStackView!
+  @IBOutlet private var locationNameLabel: UILabel!
+  @IBOutlet private var descriptionLabel: UILabel!
+  @IBOutlet private var temperatureLabel: UILabel!
+  @IBOutlet private var iconImageView: UIImageView!
+  @IBOutlet private var weekdayLabel: UILabel!
+  @IBOutlet private var dateLabel: UILabel!
+  @IBOutlet private var imageContainerView: UIView!
+  @IBOutlet private var minTemperatureLabel: UILabel!
+  @IBOutlet private var maxTemperatureLabel: UILabel!
+  @IBOutlet private var loadingView: UIActivityIndicatorView!
+  @IBOutlet private var generalErrorLabel: UILabel!
+  @IBOutlet private var weatherDataView: UIStackView!
   
-  let weatherService = WeatherService()
-  var locationManager: LocationManager?
+  private let weatherService = WeatherService()
+  private var locationManager: LocationManager?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -34,22 +34,22 @@ class MainViewController: UIViewController {
     locationManager?.updateLocation()
   }
 
-  func setupView() {
+  private func setupView() {
     weatherDataView(isHidden: true, errorIsHidden: true, isLoading: true)
     imageContainerView.setRounded()
   }
   
-  func getWeather(withLocation location: GeoCoordinate) {
+  private func getWeather(withLocation location: GeoCoordinate) {
     weatherService.getWeather(withLocation: location, onSuccess: updateWeatherData, onFailure: getWeatherOnFailure)
   }
   
-  func weatherDataView(isHidden: Bool, errorIsHidden: Bool, isLoading: Bool) {
+  private func weatherDataView(isHidden: Bool, errorIsHidden: Bool, isLoading: Bool) {
     weatherDataView.isHidden = isHidden
     generalErrorLabel.isHidden = errorIsHidden
     isLoading ? loadingView.startAnimating() : loadingView.stopAnimating()
   }
   
-  func updateWeatherData(weather: Weather?) {
+  private func updateWeatherData(weather: Weather?) {
     guard let currentWeather = weather else {
       getWeatherOnFailure(WeatherError.invalidData)
       return
@@ -67,7 +67,7 @@ class MainViewController: UIViewController {
     weatherDataView(isHidden: false, errorIsHidden: true, isLoading: false)
   }
   
-  func getWeatherOnFailure(_ error: WeatherError?) {
+  private func getWeatherOnFailure(_ error: WeatherError?) {
     let currentError = error?.description ?? "Couldn't get weather data"
     print(currentError)
     generalErrorLabel.text = currentError

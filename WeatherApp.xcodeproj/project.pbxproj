@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F21177B200BCCF6004B6183 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21177A200BCCF6004B6183 /* LocationManager.swift */; };
 		5F94E5C9200693F900E273C3 /* Date+DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94E5C8200693F900E273C3 /* Date+DS.swift */; };
 		5F94E5CD2006C58C00E273C3 /* UIView+transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94E5CC2006C58C00E273C3 /* UIView+transform.swift */; };
 		5FA8946420054061009D80A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8946320054061009D80A3 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		11CDED5F5177E0B5B8A59E78 /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F21177A200BCCF6004B6183 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		5F94E5C8200693F900E273C3 /* Date+DS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DS.swift"; sourceTree = "<group>"; };
 		5F94E5CC2006C58C00E273C3 /* UIView+transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+transform.swift"; sourceTree = "<group>"; };
 		5FA8946020054061009D80A3 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 				5FA8946A20054061009D80A3 /* Assets.xcassets */,
 				5FA8946C20054061009D80A3 /* LaunchScreen.storyboard */,
 				5FA8946F20054061009D80A3 /* Info.plist */,
+				5F21177A200BCCF6004B6183 /* LocationManager.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			files = (
 				5F94E5C9200693F900E273C3 /* Date+DS.swift in Sources */,
 				5FA8948A20057504009D80A3 /* MainViewController.swift in Sources */,
+				5F21177B200BCCF6004B6183 /* LocationManager.swift in Sources */,
 				5FA8948220054B4B009D80A3 /* WeatherService.swift in Sources */,
 				5FA8947C20054A29009D80A3 /* APIManager.swift in Sources */,
 				5F94E5CD2006C58C00E273C3 /* UIView+transform.swift in Sources */,

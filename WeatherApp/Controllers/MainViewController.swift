@@ -25,21 +25,15 @@ class MainViewController: UIViewController {
   @IBOutlet weak var weatherDataView: UIStackView!
   
   let weatherService = WeatherService()
-  var locationManager = CLLocationManager()
+  var locationManager: LocationManager?
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    initLocationManager()
     setupView()
-    locationManager.startUpdatingLocation()
+    locationManager = LocationManager(delegate: self)
+    locationManager?.updateLocation()
   }
-  
-  func initLocationManager() {
-    locationManager.delegate = self
-    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-    locationManager.requestWhenInUseAuthorization()
-  }
-  
+
   func setupView() {
     weatherDataView(isHidden: true, errorIsHidden: true, isLoading: true)
     imageContainerView.setRounded()

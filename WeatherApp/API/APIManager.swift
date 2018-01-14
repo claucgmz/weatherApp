@@ -15,7 +15,6 @@ typealias SuccessHandler = (Weather?) -> Void
 typealias ErrorHandler = (WeatherError?) -> Void
 
 class APIManager {
-  static let sharedInstance = APIManager()
-  let baseURL = "http://api.openweathermap.org/data/2.5"
-  let key = "0d616c2ea47e334eec902903eca13e40"
+  static let baseURL = "http://api.openweathermap.org/data/2.5"
+  static let key = "0d616c2ea47e334eec902903eca13e40"
 }

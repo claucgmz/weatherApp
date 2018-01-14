@@ -11,10 +11,9 @@ import Alamofire
 import AlamofireObjectMapper
 
 class WeatherService {
-  private let apiManager = APIManager.sharedInstance
   
   func getWeather(withLocation location: GeoCoordinate, onSuccess: @escaping SuccessHandler, onFailure: @escaping ErrorHandler) {
-    let weatherURL = "\(apiManager.baseURL)/weather?lat=\(location.latitude)&lon=\(location.longitude)&appid=\(apiManager.key)"
+    let weatherURL = "\(APIManager.baseURL)/weather?lat=\(location.latitude)&lon=\(location.longitude)&appid=\(APIManager.key)"
     Alamofire.request(weatherURL)
       .validate()
       .responseObject { (response: DataResponse<Weather>) in

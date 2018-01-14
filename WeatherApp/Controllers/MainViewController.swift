@@ -68,7 +68,7 @@ class MainViewController: UIViewController {
   }
   
   func getWeatherOnFailure(_ error: WeatherError?) {
-    let currentError = error?.getDescription() ?? "Couldn't get weather data"
+    let currentError = error?.description ?? "Couldn't get weather data"
     print(currentError)
     generalErrorLabel.text = currentError
     weatherDataView(isHidden: true, errorIsHidden: false, isLoading: false)

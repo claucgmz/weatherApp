@@ -1,5 +1,5 @@
 //
-//  Date+DS.swift
+//  Date+String.swift
 //  WeatherApp
 //
 //  Created by Caludia Carrillo on 1/10/18.

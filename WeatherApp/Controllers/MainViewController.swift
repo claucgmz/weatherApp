@@ -33,7 +33,8 @@ class MainViewController: UIViewController {
     locationManager = LocationManager(delegate: self)
     locationManager?.updateLocation()
   }
-
+  
+  // MARK: - Private methods
   private func setupView() {
     weatherDataView(isHidden: true, errorIsHidden: true, isLoading: true)
     imageContainerView.setRounded()
@@ -73,12 +74,9 @@ class MainViewController: UIViewController {
     generalErrorLabel.text = currentError
     weatherDataView(isHidden: true, errorIsHidden: false, isLoading: false)
   }
-
 }
 
-/*
- // MARK: - CLLocationManagerDelegate methods
- */
+// MARK: - CLLocationManagerDelegate methods
 extension MainViewController: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     guard let lastLocation = locations.last else {

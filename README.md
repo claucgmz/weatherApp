@@ -1,14 +1,13 @@
-<div style="display:flex">
-  <p align="center" style="width: 33.33%; height: auto">
-  <img src="https://lh3.googleusercontent.com/jJ0V9EaQy902uLKyOhkFvib5USf7UGrDXjUavXIbTB1GGAx3LIfRvapzIywL0xUjGW4HlZpY3dod-g=w2534-h1328"/>
+## WeatherApp
+
+<p align="center">
+  <img src="https://lh3.googleusercontent.com/u/0/d/1VH0eadJ5QHDe3KgxcjhrA_2_lTIG38e8=s3200-k-iv1"/>
 </p>
 
-<p align="center" style="width: 33.33%; height: auto">
-  <img src="https://lh4.googleusercontent.com/QfL1PZMF7UuP4tEG4SkDlD1C2N09Bi6Ii90XZW258jDNUnVmlLTl02JTfHYf5yPd7jO3lsxKjIKTuPHID2vb=w2534-h1328"/>
+<p align="center">
+  <img src="https://lh3.googleusercontent.com/u/0/d/1AfGyrZubgIJEHnwEGIFHwDpu22_AiWvk=s3200-k-iv1"/>
 </p>
 
-<p align="center" style="width: 33.33%; height: auto">
-  <img src="https://lh3.googleusercontent.com/e3XJwe6pSujUthSh3RGig4QDiRwbut1at6954lUUt5rsYLK8CW6lTedfqvjEr5VYhnHj_eMIimVxcdBKY7S4=w2534-h1328"/>
+<p align="center">
+  <img src="https://lh3.googleusercontent.com/u/0/d/1sqAb2i7QdUgDD-UVOaiMj53PZrpIFWOf=s3200-k-iv1"/>
 </p>
-</div>
-
